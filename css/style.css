@@ -6080,7 +6080,7 @@ header .TopBar .search {
   font-size: 20px;
 }
 header .navigation {
-  height: 100px;
+  height: 120px;
   background: #fff;
   border-bottom: 1px solid #231f20;
 }
@@ -6100,7 +6100,7 @@ header .navigation ul li {
   display: table-cell;
   vertical-align: center;
   text-align: center;
-  height: 70px;
+  height: 90px;
   width: 100px;
   border-left: 1px solid #231f20;
 }
@@ -6118,7 +6118,68 @@ header .navigation ul li:first-child {
   border: none;
 }
 header .carousel {
-  height: 350px;
+  height: 300px;
   width: 100%;
   background: #222;
+}
+header .carousel .carousel-indicators .active {
+  border: 2px solid #00aeef;
+}
+section .content {
+  background: #fff;
+  margin: 0;
+  padding: 10px;
+}
+section .content .evenementen {
+  background: #e2e2e2;
+  width: 300px;
+  height: 425px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+section .content .watismijnstad {
+  background: #231f20;
+  border-radius: 5px;
+  height: 425px;
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+section .content .sidebar {
+  height: 425px;
+  width: 190px;
+  background: #8cc63f;
+  color: #231f20;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+section .content .nieuws {
+  background: #e2e2e2;
+  width: 300px;
+  height: 425px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+section .content .forum {
+  background: #e2e2e2;
+  width: 300px;
+  height: 425px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+section .content .uitgelicht {
+  background: #e2e2e2;
+  border-radius: 5px;
+  height: 425px;
+}
+footer .footer {
+  background: #231f20;
+  margin: 0;
+  height: 200px;
+  color: #9b9b9b;
+  padding: 10px;
+}
+footer .footer .sitemap {
+  border-right: 1px solid #9b9b9b;
 }

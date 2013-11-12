@@ -62,7 +62,7 @@ header{
 	}
 			
 	.navigation{
-		height:100px;
+		height:120px;
 		background:#fff;
 		border-bottom:1px solid @DarkGrey;
 
@@ -82,7 +82,7 @@ header{
 			display: table-cell;
 			vertical-align: center;
 			text-align: center;
-			height: 70px;
+			height: 90px;
 			width: 100px;
 			border-left: 1px solid @DarkGrey;
 
@@ -103,9 +103,78 @@ header{
 	}
 
 	.carousel{
-		height:350px;
+		height:300px;
 		width: 100%;
 		background:#222; //Temp Background Color
+		.carousel-indicators .active{border:2px solid @Blue;}
 	}		
 
+}
+section{
+
+	.content{
+		background: #fff;
+		margin: 0;
+		padding: 10px;
+		
+		.evenementen{
+			background: @LightGrey;
+			width: 300px;
+			height: 425px;
+			border-radius: 5px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+		.watismijnstad{
+			background:@DarkGrey;
+			border-radius: 5px;
+			height: 425px;
+			color:#fff;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+		.sidebar{
+			height: 425px;
+			width: 190px;
+			background: @Green;
+			color: @DarkGrey;
+			border-radius: 5px;
+			margin-bottom: 10px;
+		}
+		.nieuws{
+			background: @LightGrey;
+			width: 300px;
+			height: 425px;
+			border-radius: 5px;
+			margin-right: 10px;
+		}
+		.forum{
+			background: @LightGrey;
+			width: 300px;
+			height: 425px;
+			border-radius: 5px;
+			margin-right: 10px;
+		}
+		.uitgelicht{
+			background:@LightGrey;
+			border-radius: 5px;
+			height: 425px;
+		}
+	}
+}
+footer{
+	.footer{
+		background:@DarkGrey;
+		margin: 0;
+		height: 200px;
+		color: @MidGrey;
+		padding:10px;
+
+		.sitemap{
+			border-right:1px solid @MidGrey;
+		}
+		.verbindt{}
+		.copyright{}
+		.partners{}
+	}
 }
