@@ -1,0 +1,32 @@
+/* 
+	COLORS:
+	
+	//Basic colors
+	Light Blue #cfedfc
+	Blue       #00aeef
+	Green      #8cc63f
+	Pink       #ec008c
+	Dark Grey  #231f20
+	Mid Grey   #9b9b9b
+	Light Grey #e2e2e2
+
+	//Footer
+	Grey 8     #828282
+	Grey 6     #6c6c6c
+	
+	//Background
+	Grey       #acacac
+
+	//Hovers
+	Blue  #007dab
+	Green #709e33
+	Pink  #c80077
+*/
+
+Body{
+	background-color: #acacac;
+	color: #323232;
+	font-size: 13pt;
+	line-height: 18pt;
+	font-family: 'Ubuntu', sans-serif;
+}
