@@ -48,12 +48,18 @@ header{
 				color:#fff;
 				font-weight: 300;
 			}
+			p a{color:@Green;}
+			p span{
+				color:@Pink;
+				margin-left: 5px;
+			}
 			.login{
 				width:50px;
 				height: 20px;
 				background: #fff;
 				text-align: center;
 				font-size: 14px;
+				a{color:@DarkGrey;}
 			}
 			.search{
 				color:@Blue;
@@ -67,11 +73,10 @@ header{
 		border-bottom:1px solid @DarkGrey;
 
 		.logo{
-			display: block;
-			float: left;
+			
 		}
 		nav{
-			float: left; 
+			 
 		}
 		ul li{
 			list-style: none;
@@ -124,6 +129,72 @@ section{
 			border-radius: 5px;
 			margin-right: 10px;
 			margin-bottom: 10px;
+			padding: 0;
+			position: relative;
+
+			.HeadImg{
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				height:170px;
+
+				h4{
+					background: @Pink;
+					height:30px;
+					color:#fff;
+					padding-left:20px;
+					line-height:30px;
+					position: relative;
+					top:120px;
+					width:90%
+				}
+				h4:hover{
+					background: @PinkHov; 
+					color: @DarkGrey;
+				}
+			}
+			.ContentBlock{
+				padding: 10px;
+				ul{margin:0; padding:0;}
+				ul li{
+					list-style: none;
+
+					.datum{
+						font-size: 13px;
+						color:@MidGrey;
+						float: left;
+						margin-right:20px;
+						width:50px;
+					}
+					a{
+						float:left;
+						color: @DarkGrey;
+					}
+					a:hover{color:@PinkHov;}
+					span{
+							color:@MidGrey;
+							font-size: 10px;
+							margin-left: 70px;
+						}
+				}
+				
+			}
+			.MeerBtn{
+				height:25px;
+				width:100px;
+				color:#fff;
+				font-weight: 500;
+				line-height: 25px;
+				border-bottom-right-radius: 5px;
+				background:@Pink;
+				position: absolute;
+				top:400px;
+				right:0px;
+				text-align: center;
+			}
+			.MeerBtn:hover{
+				background: @PinkHov; 
+				color: @DarkGrey;
+			}
 		}
 		.watismijnstad{
 			background:@DarkGrey;
@@ -132,14 +203,140 @@ section{
 			color:#fff;
 			margin-right: 10px;
 			margin-bottom: 10px;
+			padding: 0;
+			position: relative;
+
+			.HeadImg{
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				height:170px;
+
+				h4{
+					background: @Blue;
+					height:30px;
+					color:#fff;
+					padding-left:20px;
+					line-height:30px;
+					position: relative;
+					top:120px;
+					width:90%
+				}
+				h4:hover{
+					background: @BlueHov; 
+					color: @DarkGrey;
+				}
+			}
+			.ContentBlock{
+				padding:10px;
+
+				p{
+					font-weight: 100;
+					font-size: 12px;
+				}
+			}
+			.MeerBtn{
+				height:25px;
+				width:100px;
+				color:#fff;
+				font-weight: 500;
+				line-height: 25px;
+				border-bottom-right-radius: 5px;
+				background:@Blue;
+				position: absolute;
+				top:400px;
+				right:0px;
+				text-align: center;
+			}
+			.MeerBtn:hover{
+				background: @BlueHov; 
+				color: @DarkGrey;
+			}
 		}
 		.sidebar{
 			height: 425px;
 			width: 190px;
-			background: @Green;
-			color: @DarkGrey;
-			border-radius: 5px;
+			padding-left: 0;
 			margin-bottom: 10px;
+
+			#WordLid{
+				padding:10px;
+				width: 190px;
+				text-align: center;
+				background: @Green;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+
+				h3{
+					color: @DarkGrey; 
+					font-size: 22px; 
+					font-weight: 700;
+				}
+				p{
+					color:#fff;
+					font-size: 12px;
+					font-weight: 100;
+				}
+				a{text-decoration: none;}
+				a #WordLidBtn{
+					font-weight: 700;
+					font-size: 18px;
+					color: #fff;
+					text-align: center;
+					background: @Pink;
+					border-radius: 5px;
+					height:30px;
+					line-height: 30px;
+					margin-bottom: 10px;
+				}
+				a #WordLidBtn:hover{
+					background: @PinkHov;	
+				}
+				a #LoginBtn{
+					font-weight: 700;
+					font-size: 18px;
+					color: @DarkGrey;
+					text-align: center;
+					background: #fff;
+					border-radius: 5px;
+					height:30px;
+					line-height: 30px;
+				}
+				a #LoginBtn:hover{
+					background: @DarkGrey;
+					color:#fff;
+				}
+			}
+			#PlaatsEvent{
+				width: 190px;
+				background: @GreenHov;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				padding: 10px;
+
+				a{text-decoration: none;}
+				a #PlaatsEventBtn{
+					border-radius: 5px;
+					text-align: center;
+					background: @Green;
+
+					h3{
+						color:#fff;
+						font-size: 22px; 
+						font-weight: 700;
+						padding-top: 5px;
+					}
+					p{
+						color:#fff;
+						font-size: 12px;
+						font-weight: 100;
+						padding: 5px;
+					}
+				}
+				a #PlaatsEventBtn:hover{
+					background: @DarkGrey;
+					color:#fff;
+				}
+			}
 		}
 		.nieuws{
 			background: @LightGrey;
@@ -147,6 +344,73 @@ section{
 			height: 425px;
 			border-radius: 5px;
 			margin-right: 10px;
+			margin-bottom: 10px;
+			padding: 0;
+			position: relative;
+
+			.HeadImg{
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				height:170px;
+
+				h4{
+					background: @Blue;
+					height:30px;
+					color:#fff;
+					padding-left:20px;
+					line-height:30px;
+					position: relative;
+					top:120px;
+					width:90%
+				}
+				h4:hover{
+					background: @BlueHov; 
+					color: @DarkGrey;
+				}
+			}
+			.ContentBlock{
+				padding: 10px;
+				ul{margin:0; padding:0;}
+				ul li{
+					list-style: none;
+
+					.datum{
+						font-size: 13px;
+						color:@MidGrey;
+						float: left;
+						margin-right:20px;
+						width:50px;
+					}
+					a{
+						float:left;
+						color: @DarkGrey;
+					}
+					a:hover{color:@BlueHov;}
+					span{
+							color:@MidGrey;
+							font-size: 10px;
+							margin-left: 70px;
+						}
+				}
+				
+			}
+			.MeerBtn{
+				height:25px;
+				width:100px;
+				color:#fff;
+				font-weight: 500;
+				line-height: 25px;
+				border-bottom-right-radius: 5px;
+				background:@Blue;
+				position: absolute;
+				top:400px;
+				right:0px;
+				text-align: center;
+			}
+			.MeerBtn:hover{
+				background: @BlueHov; 
+				color: @DarkGrey;
+			}
 		}
 		.forum{
 			background: @LightGrey;
@@ -154,11 +418,131 @@ section{
 			height: 425px;
 			border-radius: 5px;
 			margin-right: 10px;
+			margin-bottom: 10px;
+			padding: 0;
+			position: relative;
+
+			.HeadImg{
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				height:170px;
+
+				h4{
+					background: @Green;
+					height:30px;
+					color:#fff;
+					padding-left:20px;
+					line-height:30px;
+					position: relative;
+					top:120px;
+					width:90%;
+				}
+				h4:hover{
+					background: @GreenHov; 
+					color: @DarkGrey;
+
+				}
+			}
+			.ContentBlock{
+				padding: 10px;
+				ul{margin:0; padding:0;}
+				ul li{
+					list-style: none;
+
+					.datum{
+						font-size: 13px;
+						color:@MidGrey;
+						float: left;
+						margin-right:20px;
+						width:100px;
+					}
+					a{
+						float:left;
+						color: @DarkGrey;
+					}
+					a:hover{color:@GreenHov;}
+					span{
+							color:@MidGrey;
+							font-size: 10px;
+							margin-left: 120px;
+						}
+				}
+				
+			}
+			.MeerBtn{
+				height:25px;
+				width:100px;
+				color:#fff;
+				font-weight: 500;
+				line-height: 25px;
+				border-bottom-right-radius: 5px;
+				background:@Green;
+				position: absolute;
+				top:400px;
+				right:0px;
+				text-align: center;
+			}
+			.MeerBtn:hover{
+				background: @GreenHov; 
+				color: @DarkGrey;
+			}
 		}
 		.uitgelicht{
-			background:@LightGrey;
-			border-radius: 5px;
+			background: @LightGrey;
+			width: 360px;
 			height: 425px;
+			border-radius: 5px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			padding: 0;
+			position: relative;
+
+			.HeadImg{
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				height:170px;
+
+				h4{
+					background: @Pink;
+					height:30px;
+					color:#fff;
+					padding-left:20px;
+					line-height:30px;
+					position: relative;
+					top:120px;
+					width:90%
+				}
+				h4:hover{
+					background: @PinkHov; 
+					color: @DarkGrey;
+				}
+			}
+			.ContentBlock{
+				padding: 10px;
+
+				p{
+					font-weight: 100;
+					font-size: 12px;
+				}
+			}
+			.MeerBtn{
+				height:25px;
+				width:100px;
+				color:#fff;
+				font-weight: 500;
+				line-height: 25px;
+				border-bottom-right-radius: 5px;
+				background:@Pink;
+				position: absolute;
+				top:400px;
+				right:0px;
+				text-align: center;
+
+			}
+			.MeerBtn:hover{
+				background: @PinkHov; 
+				color: @DarkGrey;
+			}
 		}
 	}
 }
@@ -171,10 +555,30 @@ footer{
 		padding:10px;
 
 		.sitemap{
+			
+			ul{
+				margin:0;
+				padding:0;
+			}
+			ul li{
+				list-style: none;
+				font-size: 12px;
+				display: block;
+				width:100px;
+			}
+			.col-md-1{
+				border-right:1px solid @MidGrey;
+			}
+		}
+		.verbindt{
 			border-right:1px solid @MidGrey;
 		}
-		.verbindt{}
-		.copyright{}
+		.copyright{
+
+			p{
+				font-size: 12px;
+			}
+		}
 		.partners{}
 	}
 }

@@ -6068,12 +6068,22 @@ header .TopBar .PlaatsSelc {
   color: #fff;
   font-weight: 300;
 }
+header .TopBar p a {
+  color: #8cc63f;
+}
+header .TopBar p span {
+  color: #ec008c;
+  margin-left: 5px;
+}
 header .TopBar .login {
   width: 50px;
   height: 20px;
   background: #fff;
   text-align: center;
   font-size: 14px;
+}
+header .TopBar .login a {
+  color: #231f20;
 }
 header .TopBar .search {
   color: #00aeef;
@@ -6083,13 +6093,6 @@ header .navigation {
   height: 120px;
   background: #fff;
   border-bottom: 1px solid #231f20;
-}
-header .navigation .logo {
-  display: block;
-  float: left;
-}
-header .navigation nav {
-  float: left;
 }
 header .navigation ul li {
   list-style: none;
@@ -6137,6 +6140,73 @@ section .content .evenementen {
   border-radius: 5px;
   margin-right: 10px;
   margin-bottom: 10px;
+  padding: 0;
+  position: relative;
+}
+section .content .evenementen .HeadImg {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 170px;
+}
+section .content .evenementen .HeadImg h4 {
+  background: #ec008c;
+  height: 30px;
+  color: #fff;
+  padding-left: 20px;
+  line-height: 30px;
+  position: relative;
+  top: 120px;
+  width: 90%;
+}
+section .content .evenementen .HeadImg h4:hover {
+  background: #c80077;
+  color: #231f20;
+}
+section .content .evenementen .ContentBlock {
+  padding: 10px;
+}
+section .content .evenementen .ContentBlock ul {
+  margin: 0;
+  padding: 0;
+}
+section .content .evenementen .ContentBlock ul li {
+  list-style: none;
+}
+section .content .evenementen .ContentBlock ul li .datum {
+  font-size: 13px;
+  color: #9b9b9b;
+  float: left;
+  margin-right: 20px;
+  width: 50px;
+}
+section .content .evenementen .ContentBlock ul li a {
+  float: left;
+  color: #231f20;
+}
+section .content .evenementen .ContentBlock ul li a:hover {
+  color: #c80077;
+}
+section .content .evenementen .ContentBlock ul li span {
+  color: #9b9b9b;
+  font-size: 10px;
+  margin-left: 70px;
+}
+section .content .evenementen .MeerBtn {
+  height: 25px;
+  width: 100px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 25px;
+  border-bottom-right-radius: 5px;
+  background: #ec008c;
+  position: absolute;
+  top: 400px;
+  right: 0px;
+  text-align: center;
+}
+section .content .evenementen .MeerBtn:hover {
+  background: #c80077;
+  color: #231f20;
 }
 section .content .watismijnstad {
   background: #231f20;
@@ -6145,14 +6215,137 @@ section .content .watismijnstad {
   color: #fff;
   margin-right: 10px;
   margin-bottom: 10px;
+  padding: 0;
+  position: relative;
+}
+section .content .watismijnstad .HeadImg {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 170px;
+}
+section .content .watismijnstad .HeadImg h4 {
+  background: #00aeef;
+  height: 30px;
+  color: #fff;
+  padding-left: 20px;
+  line-height: 30px;
+  position: relative;
+  top: 120px;
+  width: 90%;
+}
+section .content .watismijnstad .HeadImg h4:hover {
+  background: #007dab;
+  color: #231f20;
+}
+section .content .watismijnstad .ContentBlock {
+  padding: 10px;
+}
+section .content .watismijnstad .ContentBlock p {
+  font-weight: 100;
+  font-size: 12px;
+}
+section .content .watismijnstad .MeerBtn {
+  height: 25px;
+  width: 100px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 25px;
+  border-bottom-right-radius: 5px;
+  background: #00aeef;
+  position: absolute;
+  top: 400px;
+  right: 0px;
+  text-align: center;
+}
+section .content .watismijnstad .MeerBtn:hover {
+  background: #007dab;
+  color: #231f20;
 }
 section .content .sidebar {
   height: 425px;
   width: 190px;
-  background: #8cc63f;
-  color: #231f20;
-  border-radius: 5px;
+  padding-left: 0;
   margin-bottom: 10px;
+}
+section .content .sidebar #WordLid {
+  padding: 10px;
+  width: 190px;
+  text-align: center;
+  background: #8cc63f;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+section .content .sidebar #WordLid h3 {
+  color: #231f20;
+  font-size: 22px;
+  font-weight: 700;
+}
+section .content .sidebar #WordLid p {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 100;
+}
+section .content .sidebar #WordLid a {
+  text-decoration: none;
+}
+section .content .sidebar #WordLid a #WordLidBtn {
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  background: #ec008c;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+section .content .sidebar #WordLid a #WordLidBtn:hover {
+  background: #c80077;
+}
+section .content .sidebar #WordLid a #LoginBtn {
+  font-weight: 700;
+  font-size: 18px;
+  color: #231f20;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+}
+section .content .sidebar #WordLid a #LoginBtn:hover {
+  background: #231f20;
+  color: #fff;
+}
+section .content .sidebar #PlaatsEvent {
+  width: 190px;
+  background: #709e33;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 10px;
+}
+section .content .sidebar #PlaatsEvent a {
+  text-decoration: none;
+}
+section .content .sidebar #PlaatsEvent a #PlaatsEventBtn {
+  border-radius: 5px;
+  text-align: center;
+  background: #8cc63f;
+}
+section .content .sidebar #PlaatsEvent a #PlaatsEventBtn h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  padding-top: 5px;
+}
+section .content .sidebar #PlaatsEvent a #PlaatsEventBtn p {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 100;
+  padding: 5px;
+}
+section .content .sidebar #PlaatsEvent a #PlaatsEventBtn:hover {
+  background: #231f20;
+  color: #fff;
 }
 section .content .nieuws {
   background: #e2e2e2;
@@ -6160,6 +6353,74 @@ section .content .nieuws {
   height: 425px;
   border-radius: 5px;
   margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  position: relative;
+}
+section .content .nieuws .HeadImg {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 170px;
+}
+section .content .nieuws .HeadImg h4 {
+  background: #00aeef;
+  height: 30px;
+  color: #fff;
+  padding-left: 20px;
+  line-height: 30px;
+  position: relative;
+  top: 120px;
+  width: 90%;
+}
+section .content .nieuws .HeadImg h4:hover {
+  background: #007dab;
+  color: #231f20;
+}
+section .content .nieuws .ContentBlock {
+  padding: 10px;
+}
+section .content .nieuws .ContentBlock ul {
+  margin: 0;
+  padding: 0;
+}
+section .content .nieuws .ContentBlock ul li {
+  list-style: none;
+}
+section .content .nieuws .ContentBlock ul li .datum {
+  font-size: 13px;
+  color: #9b9b9b;
+  float: left;
+  margin-right: 20px;
+  width: 50px;
+}
+section .content .nieuws .ContentBlock ul li a {
+  float: left;
+  color: #231f20;
+}
+section .content .nieuws .ContentBlock ul li a:hover {
+  color: #007dab;
+}
+section .content .nieuws .ContentBlock ul li span {
+  color: #9b9b9b;
+  font-size: 10px;
+  margin-left: 70px;
+}
+section .content .nieuws .MeerBtn {
+  height: 25px;
+  width: 100px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 25px;
+  border-bottom-right-radius: 5px;
+  background: #00aeef;
+  position: absolute;
+  top: 400px;
+  right: 0px;
+  text-align: center;
+}
+section .content .nieuws .MeerBtn:hover {
+  background: #007dab;
+  color: #231f20;
 }
 section .content .forum {
   background: #e2e2e2;
@@ -6167,11 +6428,127 @@ section .content .forum {
   height: 425px;
   border-radius: 5px;
   margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  position: relative;
+}
+section .content .forum .HeadImg {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 170px;
+}
+section .content .forum .HeadImg h4 {
+  background: #8cc63f;
+  height: 30px;
+  color: #fff;
+  padding-left: 20px;
+  line-height: 30px;
+  position: relative;
+  top: 120px;
+  width: 90%;
+}
+section .content .forum .HeadImg h4:hover {
+  background: #709e33;
+  color: #231f20;
+}
+section .content .forum .ContentBlock {
+  padding: 10px;
+}
+section .content .forum .ContentBlock ul {
+  margin: 0;
+  padding: 0;
+}
+section .content .forum .ContentBlock ul li {
+  list-style: none;
+}
+section .content .forum .ContentBlock ul li .datum {
+  font-size: 13px;
+  color: #9b9b9b;
+  float: left;
+  margin-right: 20px;
+  width: 100px;
+}
+section .content .forum .ContentBlock ul li a {
+  float: left;
+  color: #231f20;
+}
+section .content .forum .ContentBlock ul li a:hover {
+  color: #709e33;
+}
+section .content .forum .ContentBlock ul li span {
+  color: #9b9b9b;
+  font-size: 10px;
+  margin-left: 120px;
+}
+section .content .forum .MeerBtn {
+  height: 25px;
+  width: 100px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 25px;
+  border-bottom-right-radius: 5px;
+  background: #8cc63f;
+  position: absolute;
+  top: 400px;
+  right: 0px;
+  text-align: center;
+}
+section .content .forum .MeerBtn:hover {
+  background: #709e33;
+  color: #231f20;
 }
 section .content .uitgelicht {
   background: #e2e2e2;
-  border-radius: 5px;
+  width: 360px;
   height: 425px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  position: relative;
+}
+section .content .uitgelicht .HeadImg {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 170px;
+}
+section .content .uitgelicht .HeadImg h4 {
+  background: #ec008c;
+  height: 30px;
+  color: #fff;
+  padding-left: 20px;
+  line-height: 30px;
+  position: relative;
+  top: 120px;
+  width: 90%;
+}
+section .content .uitgelicht .HeadImg h4:hover {
+  background: #c80077;
+  color: #231f20;
+}
+section .content .uitgelicht .ContentBlock {
+  padding: 10px;
+}
+section .content .uitgelicht .ContentBlock p {
+  font-weight: 100;
+  font-size: 12px;
+}
+section .content .uitgelicht .MeerBtn {
+  height: 25px;
+  width: 100px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 25px;
+  border-bottom-right-radius: 5px;
+  background: #ec008c;
+  position: absolute;
+  top: 400px;
+  right: 0px;
+  text-align: center;
+}
+section .content .uitgelicht .MeerBtn:hover {
+  background: #c80077;
+  color: #231f20;
 }
 footer .footer {
   background: #231f20;
@@ -6180,6 +6557,22 @@ footer .footer {
   color: #9b9b9b;
   padding: 10px;
 }
-footer .footer .sitemap {
+footer .footer .sitemap ul {
+  margin: 0;
+  padding: 0;
+}
+footer .footer .sitemap ul li {
+  list-style: none;
+  font-size: 12px;
+  display: block;
+  width: 100px;
+}
+footer .footer .sitemap .col-md-1 {
   border-right: 1px solid #9b9b9b;
+}
+footer .footer .verbindt {
+  border-right: 1px solid #9b9b9b;
+}
+footer .footer .copyright p {
+  font-size: 12px;
 }
