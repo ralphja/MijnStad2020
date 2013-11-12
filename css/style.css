@@ -6316,6 +6316,13 @@ section .content .sidebar #WordLid a #LoginBtn:hover {
   background: #231f20;
   color: #fff;
 }
+section .content .sidebar .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #8cc63f;
+}
 section .content .sidebar #PlaatsEvent {
   width: 190px;
   background: #709e33;
