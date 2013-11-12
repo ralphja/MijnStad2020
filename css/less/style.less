@@ -1,49 +1,111 @@
-/* 
-	COLORS:
-	
+/*
+	COLOR variables:
+*/	
 	//Basic colors
-	Light Blue #cfedfc
-	Blue       #00aeef
-	Green      #8cc63f
-	Pink       #ec008c
-	Dark Grey  #231f20
-	Mid Grey   #9b9b9b
-	Light Grey #e2e2e2
+	@LightBlue: #cfedfc;
+	@Blue: #00aeef;
+	@Green: #8cc63f;
+	@Pink: #ec008c;
+	@DarkGrey: #231f20;
+	@MidGrey:   #9b9b9b;
+	@LightGrey: #e2e2e2;
 
 	//Footer
-	Grey 8     #828282
-	Grey 6     #6c6c6c
+	@Grey8: #828282;
+	@Grey6: #6c6c6c;
 	
 	//Background
-	Grey       #acacac
+	@Grey: #acacac;
 
 	//Hovers
-	Blue  #007dab
-	Green #709e33
-	Pink  #c80077
-*/
+	@BlueHov: #007dab;
+	@GreenHov: #709e33;
+	@PinkHov: #c80077;
+
 // IMPORTS
 @import "bootstrap.less";
 
 
 body{
-	background-color: #acacac;
+	background-color: @Grey;
 	color: #323232;
-	font-size: 13pt;
-	line-height: 18pt;
+	font-size: 13px;
+	line-height: 18px;
 	font-family: 'Ubuntu', sans-serif;
 }
-
-
-
-
-
 
 header{
 	height:450px;
 
 	.TopBar{
 		background:#231f20;
-		height:20px;
+		height:30px;
+		margin: 0px;
+		padding:5px;
+
+		.PlaatsSelc{
+				font-size: 12px;
+				color:#fff;
+				font-weight: 300;
+			}
+			.login{
+				width:50px;
+				height: 20px;
+				background: #fff;
+				text-align: center;
+				font-size: 14px;
+			}
+			.search{
+				color:@Blue;
+				font-size: 20px;
+			}
 	}
+			
+	.navigation{
+		height:100px;
+		background:#fff;
+		border-bottom:1px solid @DarkGrey;
+
+		.logo{
+			display: block;
+			float: left;
+		}
+		nav{
+			float: left; 
+		}
+		ul li{
+			list-style: none;
+			display: inline-block;
+			float: left;
+			margin: 0 10px;
+			padding: 10px;
+			display: table-cell;
+			vertical-align: center;
+			text-align: center;
+			height: 70px;
+			width: 100px;
+			border-left: 1px solid @DarkGrey;
+
+			a{
+				color:@DarkGrey;
+				font-weight: 500;
+				font-size: 15px;
+			}
+			span{
+				font-size: 10px;
+				color: @MidGrey;
+				clear: both;
+
+			}
+		}
+		ul li:first-child{border:none;}
+
+	}
+
+	.carousel{
+		height:350px;
+		width: 100%;
+		background:#222; //Temp Background Color
+	}		
+
 }
