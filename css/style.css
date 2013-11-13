@@ -6057,16 +6057,36 @@ body {
 header {
   height: 450px;
 }
+header .logo {
+  background: url(../img/logo_mijnstad2020.png) no-repeat;
+  height: 218px;
+  width: 100%;
+  position: absolute;
+  top: 5px;
+  left: 10%;
+  z-index: 9999;
+  display: inline-block;
+  background-image: url('../img/logo_mijnstad2020.png');
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  header .logo {
+    background-image: url("../img/logo_mijnstad2020@2x.png");
+    background-size: 218px 197px;
+  }
+}
 header .TopBar {
   background: #231f20;
   height: 30px;
   margin: 0px;
-  padding: 5px;
 }
 header .TopBar .PlaatsSelc {
   font-size: 12px;
   color: #fff;
   font-weight: 300;
+  margin-top: 5px;
+}
+header .TopBar p {
+  margin-bottom: 0;
 }
 header .TopBar p a {
   color: #8cc63f;
@@ -6081,6 +6101,7 @@ header .TopBar .login {
   background: #fff;
   text-align: center;
   font-size: 14px;
+  margin-top: 5px;
 }
 header .TopBar .login a {
   color: #231f20;
@@ -6088,37 +6109,71 @@ header .TopBar .login a {
 header .TopBar .search {
   color: #00aeef;
   font-size: 20px;
+  margin-top: 5px;
 }
 header .navigation {
   height: 120px;
   background: #fff;
   border-bottom: 1px solid #231f20;
+  clear: both;
+  margin: 0 -3px;
 }
-header .navigation ul li {
+header .navigation nav ul {
+  margin-bottom: 0px;
+}
+header .navigation nav li {
   list-style: none;
-  display: inline-block;
+  display: block;
   float: left;
-  margin: 0 10px;
-  padding: 10px;
-  display: table-cell;
-  vertical-align: center;
+  padding: 50px 0px 0px ;
   text-align: center;
-  height: 90px;
-  width: 100px;
+  height: 120px;
+  width: 130px;
   border-left: 1px solid #231f20;
 }
-header .navigation ul li a {
+header .navigation nav li a {
   color: #231f20;
   font-weight: 500;
   font-size: 15px;
+  height: 120px;
+  width: 130px;
+  display: inline-block;
 }
-header .navigation ul li span {
+header .navigation nav li span {
   font-size: 10px;
   color: #9b9b9b;
   clear: both;
+  display: block;
+  text-align: center;
 }
-header .navigation ul li:first-child {
+header .navigation nav li .glyphicon {
+  display: inline-block;
+  font-size: 14px;
+}
+header .navigation nav ul li:first-child {
   border: none;
+}
+header .navigation nav ul li:hover {
+  background: #231f20;
+  border-bottom: 3px solid #8cc63f;
+}
+header .navigation nav ul li:hover a {
+  color: #fff;
+  text-decoration: none;
+}
+header .navigation nav ul li:hover span {
+  color: #8cc63f;
+}
+header .navigation nav ul li.active {
+  background: #231f20;
+  border-bottom: 3px solid #8cc63f;
+}
+header .navigation nav ul li.active a {
+  color: #fff;
+  text-decoration: none;
+}
+header .navigation nav ul li.active span {
+  color: #8cc63f;
 }
 header .carousel {
   height: 300px;
@@ -6132,11 +6187,14 @@ section .content {
   background: #fff;
   margin: 0;
   padding: 10px;
+  height: 445px;
 }
 section .content .evenementen {
   background: #e2e2e2;
-  width: 300px;
+  width: 28%;
   height: 425px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -6144,9 +6202,23 @@ section .content .evenementen {
   position: relative;
 }
 section .content .evenementen .HeadImg {
+  position: relative;
+  top: -10px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   height: 170px;
+  background: url(../img/header_events.png) no-repeat;
+  background-image: url('../img/header_events.png');
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  section .content .evenementen .HeadImg {
+    background-image: url("../img/header_events@2x.png");
+    background-size: 355px 235px;
+  }
 }
 section .content .evenementen .HeadImg h4 {
   background: #ec008c;
@@ -6197,6 +6269,8 @@ section .content .evenementen .MeerBtn {
   color: #fff;
   font-weight: 500;
   line-height: 25px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
   border-bottom-right-radius: 5px;
   background: #ec008c;
   position: absolute;
@@ -6210,6 +6284,8 @@ section .content .evenementen .MeerBtn:hover {
 }
 section .content .watismijnstad {
   background: #231f20;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   height: 425px;
   color: #fff;
@@ -6219,9 +6295,24 @@ section .content .watismijnstad {
   position: relative;
 }
 section .content .watismijnstad .HeadImg {
+  position: relative;
+  top: -10px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   height: 170px;
+  background: url(../img/header_mijnstad.png) no-repeat;
+  background-position: 30% 55%;
+  background-image: url('../img/header_mijnstad.png');
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  section .content .watismijnstad .HeadImg {
+    background-image: url("../img/header_mijnstad@2x.png");
+    background-size: 571px 427px;
+  }
 }
 section .content .watismijnstad .HeadImg h4 {
   background: #00aeef;
@@ -6251,6 +6342,8 @@ section .content .watismijnstad .MeerBtn {
   font-weight: 500;
   line-height: 25px;
   border-bottom-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
   background: #00aeef;
   position: absolute;
   top: 400px;
@@ -6261,17 +6354,24 @@ section .content .watismijnstad .MeerBtn:hover {
   background: #007dab;
   color: #231f20;
 }
+section .content .col-md-3 {
+  padding: 0;
+}
 section .content .sidebar {
   height: 425px;
-  width: 190px;
+  width: 20%;
   padding-left: 0;
   margin-bottom: 10px;
 }
 section .content .sidebar #WordLid {
   padding: 10px;
-  width: 190px;
+  width: 100%;
   text-align: center;
   background: #8cc63f;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -6294,6 +6394,8 @@ section .content .sidebar #WordLid a #WordLidBtn {
   color: #fff;
   text-align: center;
   background: #ec008c;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   height: 30px;
   line-height: 30px;
@@ -6308,6 +6410,8 @@ section .content .sidebar #WordLid a #LoginBtn {
   color: #231f20;
   text-align: center;
   background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   height: 30px;
   line-height: 30px;
@@ -6324,8 +6428,12 @@ section .content .sidebar .arrow-down {
   border-top: 20px solid #8cc63f;
 }
 section .content .sidebar #PlaatsEvent {
-  width: 190px;
+  width: 100%;
   background: #709e33;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-bottomright: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 10px;
@@ -6334,6 +6442,8 @@ section .content .sidebar #PlaatsEvent a {
   text-decoration: none;
 }
 section .content .sidebar #PlaatsEvent a #PlaatsEventBtn {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   text-align: center;
   background: #8cc63f;
@@ -6356,8 +6466,10 @@ section .content .sidebar #PlaatsEvent a #PlaatsEventBtn:hover {
 }
 section .content .nieuws {
   background: #e2e2e2;
-  width: 300px;
+  width: 28%;
   height: 425px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -6365,9 +6477,24 @@ section .content .nieuws {
   position: relative;
 }
 section .content .nieuws .HeadImg {
+  position: relative;
+  top: -10px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   height: 170px;
+  background: url(../img/header_nieuws.png) no-repeat;
+  background-position: 60% 60%;
+  background-image: url('../img/header_nieuws.png');
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  section .content .nieuws .HeadImg {
+    background-image: url("../img/header_nieuws@2x.png");
+    background-size: 522px 350px;
+  }
 }
 section .content .nieuws .HeadImg h4 {
   background: #00aeef;
@@ -6419,6 +6546,8 @@ section .content .nieuws .MeerBtn {
   font-weight: 500;
   line-height: 25px;
   border-bottom-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
   background: #00aeef;
   position: absolute;
   top: 400px;
@@ -6431,8 +6560,10 @@ section .content .nieuws .MeerBtn:hover {
 }
 section .content .forum {
   background: #e2e2e2;
-  width: 300px;
+  width: 28%;
   height: 425px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -6440,9 +6571,24 @@ section .content .forum {
   position: relative;
 }
 section .content .forum .HeadImg {
+  position: relative;
+  top: -10px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   height: 170px;
+  background: url(../img/header_forum.png) no-repeat;
+  background-position: 60% 84%;
+  background-image: url('../img/header_forum.png');
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  section .content .forum .HeadImg {
+    background-image: url("../img/header_forum@2x.png");
+    background-size: 907px 606px;
+  }
 }
 section .content .forum .HeadImg h4 {
   background: #8cc63f;
@@ -6494,6 +6640,8 @@ section .content .forum .MeerBtn {
   font-weight: 500;
   line-height: 25px;
   border-bottom-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
   background: #8cc63f;
   position: absolute;
   top: 400px;
@@ -6504,20 +6652,39 @@ section .content .forum .MeerBtn:hover {
   background: #709e33;
   color: #231f20;
 }
+section .content .col-md-5 {
+  padding: 0;
+}
 section .content .uitgelicht {
   background: #e2e2e2;
-  width: 360px;
   height: 425px;
+  width: 42.2%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
-  margin-right: 10px;
   margin-bottom: 10px;
   padding: 0;
   position: relative;
 }
 section .content .uitgelicht .HeadImg {
+  position: relative;
+  top: -10px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   height: 170px;
+  background: url(../img/header_uitgelicht.png) no-repeat;
+  background-position: 50% 60%;
+  background-image: url('../img/header_uitgelicht.png');
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  section .content .uitgelicht .HeadImg {
+    background-image: url("../img/header_uitgelicht@2x.png");
+    background-size: 907px 606px;
+  }
 }
 section .content .uitgelicht .HeadImg h4 {
   background: #ec008c;
@@ -6547,6 +6714,8 @@ section .content .uitgelicht .MeerBtn {
   font-weight: 500;
   line-height: 25px;
   border-bottom-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
   background: #ec008c;
   position: absolute;
   top: 400px;
@@ -6562,11 +6731,15 @@ footer .footer {
   margin: 0;
   height: 200px;
   color: #9b9b9b;
-  padding: 10px;
+}
+footer .footer .sitemap {
+  border-right: 1px solid #9b9b9b;
 }
 footer .footer .sitemap ul {
   margin: 0;
   padding: 0;
+  display: inline-block;
+  width: 100px;
 }
 footer .footer .sitemap ul li {
   list-style: none;
@@ -6574,12 +6747,17 @@ footer .footer .sitemap ul li {
   display: block;
   width: 100px;
 }
-footer .footer .sitemap .col-md-1 {
-  border-right: 1px solid #9b9b9b;
+footer .footer .sitemap ul li a {
+  color: #9b9b9b;
+}
+footer .footer .sitemap ul li a:hover {
+  color: #8cc63f;
 }
 footer .footer .verbindt {
   border-right: 1px solid #9b9b9b;
 }
 footer .footer .copyright p {
   font-size: 12px;
+  height: 100px;
+  margin-top: 50px;
 }

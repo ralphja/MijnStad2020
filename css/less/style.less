@@ -24,6 +24,7 @@
 
 // IMPORTS
 @import "bootstrap.less";
+@import "retina-1.1.0.less";
 
 
 body{
@@ -32,22 +33,33 @@ body{
 	font-size: 13px;
 	line-height: 18px;
 	font-family: 'Ubuntu', sans-serif;
-}
 
+}
 header{
 	height:450px;
-
+	.logo{
+			background: url(../img/logo_mijnstad2020.png) no-repeat;
+			height:218px;
+			width: 100%;
+			position: absolute;
+			top:5px;
+			left:12%;
+			z-index: 9999;
+			display: inline-block;
+			.at2x('../img/logo_mijnstad2020.png', 218px, 197px);
+		}
 	.TopBar{
 		background:#231f20;
 		height:30px;
 		margin: 0px;
-		padding:5px;
 
-		.PlaatsSelc{
+			.PlaatsSelc{
 				font-size: 12px;
 				color:#fff;
 				font-weight: 300;
+				margin-top:5px;
 			}
+			p{margin-bottom: 0;}
 			p a{color:@Green;}
 			p span{
 				color:@Pink;
@@ -59,11 +71,14 @@ header{
 				background: #fff;
 				text-align: center;
 				font-size: 14px;
+				margin-top:5px;
+
 				a{color:@DarkGrey;}
 			}
 			.search{
 				color:@Blue;
 				font-size: 20px;
+				margin-top:5px;
 			}
 	}
 			
@@ -71,40 +86,54 @@ header{
 		height:120px;
 		background:#fff;
 		border-bottom:1px solid @DarkGrey;
-
-		.logo{
-			
-		}
+		clear: both;
+		margin:0 -3px;
+		
+		.col-md-1{}
+		
 		nav{
-			 
-		}
-		ul li{
-			list-style: none;
-			display: inline-block;
-			float: left;
-			margin: 0 10px;
-			padding: 10px;
-			display: table-cell;
-			vertical-align: center;
-			text-align: center;
-			height: 90px;
-			width: 100px;
-			border-left: 1px solid @DarkGrey;
+			ul{margin-bottom: 0px;}
+			li{
+				list-style: none;
+				display: block;
+				float: left;
+				padding: 50px 0px 0px ;
+				text-align: center;
+				height: 120px;
+				width: 130px;
+				border-left: 1px solid @DarkGrey;
 
-			a{
-				color:@DarkGrey;
-				font-weight: 500;
-				font-size: 15px;
+				a{
+					color:@DarkGrey;
+					font-weight: 500;
+					font-size: 15px;
+					height: 120px;
+					width: 130px;
+					display: inline-block;
+				}
+				span{
+					font-size: 10px;
+					color: @MidGrey;
+					clear: both;
+					display: block;
+					text-align: center;
+				}
+				.glyphicon{display: inline-block; font-size: 14px;}
 			}
-			span{
-				font-size: 10px;
-				color: @MidGrey;
-				clear: both;
-
+			ul li:first-child{border:none;}
+			ul li:hover{
+				background:@DarkGrey;
+				border-bottom: 3px solid @Green;
 			}
+			ul li:hover a{color:#fff; text-decoration: none;} 
+			ul li:hover span{color:@Green;} 
+			ul li.active{
+				background:@DarkGrey;
+				border-bottom: 3px solid @Green;
+			}
+			ul li.active a{color:#fff; text-decoration: none;} 
+			ul li.active span{color:@Green;} 
 		}
-		ul li:first-child{border:none;}
-
 	}
 
 	.carousel{
@@ -116,16 +145,18 @@ header{
 
 }
 section{
-
 	.content{
 		background: #fff;
 		margin: 0;
 		padding: 10px;
+		height: 445px;
 		
 		.evenementen{
 			background: @LightGrey;
-			width: 300px;
+			width: 28%;
 			height: 425px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
 			border-radius: 5px;
 			margin-right: 10px;
 			margin-bottom: 10px;
@@ -133,9 +164,18 @@ section{
 			position: relative;
 
 			.HeadImg{
+				position: relative;
+				top:-10px;
+				-webkit-border-top-left-radius: 5px;
+				-webkit-border-top-right-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				-moz-border-radius-topright: 5px;
 				border-top-left-radius: 5px;
 				border-top-right-radius: 5px;
+
 				height:170px;
+				background: url(../img/header_events.png) no-repeat;
+				.at2x('../img/header_events.png', 355px, 235px);
 
 				h4{
 					background: @Pink;
@@ -184,6 +224,8 @@ section{
 				color:#fff;
 				font-weight: 500;
 				line-height: 25px;
+				-webkit-border-bottom-right-radius: 5px;
+				-moz-border-radius-bottomright: 5px;
 				border-bottom-right-radius: 5px;
 				background:@Pink;
 				position: absolute;
@@ -198,6 +240,8 @@ section{
 		}
 		.watismijnstad{
 			background:@DarkGrey;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
 			border-radius: 5px;
 			height: 425px;
 			color:#fff;
@@ -207,9 +251,18 @@ section{
 			position: relative;
 
 			.HeadImg{
+				position: relative;
+				top:-10px;
+				-webkit-border-top-left-radius: 5px;
+				-webkit-border-top-right-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				-moz-border-radius-topright: 5px;
 				border-top-left-radius: 5px;
 				border-top-right-radius: 5px;
 				height:170px;
+				background: url(../img/header_mijnstad.png) no-repeat;
+				background-position: 30% 55%;
+				.at2x('../img/header_mijnstad.png', 571px, 427px);
 
 				h4{
 					background: @Blue;
@@ -241,6 +294,8 @@ section{
 				font-weight: 500;
 				line-height: 25px;
 				border-bottom-right-radius: 5px;
+				-webkit-border-bottom-right-radius: 5px;
+				-moz-border-radius-bottomright: 5px;
 				background:@Blue;
 				position: absolute;
 				top:400px;
@@ -252,24 +307,32 @@ section{
 				color: @DarkGrey;
 			}
 		}
+		.col-md-3{padding:0;}
 		.sidebar{
 			height: 425px;
-			width: 190px;
+			width: 20%;
 			padding-left: 0;
 			margin-bottom: 10px;
 
 			#WordLid{
 				padding:10px;
-				width: 190px;
+				width: 100%;
 				text-align: center;
 				background: @Green;
+				-webkit-border-top-left-radius: 5px;
+				-webkit-border-top-right-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				-moz-border-radius-topright: 5px;
 				border-top-left-radius: 5px;
 				border-top-right-radius: 5px;
 
 				h3{
-					color: @DarkGrey; 
+					color:@MidGrey; 
 					font-size: 22px; 
 					font-weight: 700;
+					margin:0px;
+					padding:0px;
+
 				}
 				p{
 					color:#fff;
@@ -283,6 +346,8 @@ section{
 					color: #fff;
 					text-align: center;
 					background: @Pink;
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
 					border-radius: 5px;
 					height:30px;
 					line-height: 30px;
@@ -297,6 +362,8 @@ section{
 					color: @DarkGrey;
 					text-align: center;
 					background: #fff;
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
 					border-radius: 5px;
 					height:30px;
 					line-height: 30px;
@@ -316,14 +383,20 @@ section{
 			}
 
 			#PlaatsEvent{
-				width: 190px;
+				width: 100%;
 				background: @GreenHov;
+				-webkit-border-bottom-left-radius: 5px;
+				-webkit-border-bottom-right-radius: 5px;
+				-moz-border-radius-bottomleft: 5px;
+				-moz-border-radius-bottomright: 5px;
 				border-bottom-left-radius: 5px;
 				border-bottom-right-radius: 5px;
 				padding: 10px;
 
 				a{text-decoration: none;}
 				a #PlaatsEventBtn{
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
 					border-radius: 5px;
 					text-align: center;
 					background: @Green;
@@ -349,8 +422,10 @@ section{
 		}
 		.nieuws{
 			background: @LightGrey;
-			width: 300px;
+			width: 28%;
 			height: 425px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
 			border-radius: 5px;
 			margin-right: 10px;
 			margin-bottom: 10px;
@@ -358,9 +433,18 @@ section{
 			position: relative;
 
 			.HeadImg{
+				position: relative;
+				top:-10px;
+				-webkit-border-top-left-radius: 5px;
+				-webkit-border-top-right-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				-moz-border-radius-topright: 5px;
 				border-top-left-radius: 5px;
 				border-top-right-radius: 5px;
 				height:170px;
+				background: url(../img/header_nieuws.png) no-repeat;
+				background-position: 60% 60%; 
+				.at2x('../img/header_nieuws.png', 522px, 350px);
 
 				h4{
 					background: @Blue;
@@ -410,6 +494,8 @@ section{
 				font-weight: 500;
 				line-height: 25px;
 				border-bottom-right-radius: 5px;
+				-webkit-border-bottom-right-radius: 5px;	
+				-moz-border-radius-bottomright: 5px;
 				background:@Blue;
 				position: absolute;
 				top:400px;
@@ -423,8 +509,10 @@ section{
 		}
 		.forum{
 			background: @LightGrey;
-			width: 300px;
+			width: 28%;
 			height: 425px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
 			border-radius: 5px;
 			margin-right: 10px;
 			margin-bottom: 10px;
@@ -432,9 +520,18 @@ section{
 			position: relative;
 
 			.HeadImg{
+				position: relative;
+				top:-10px;
+				-webkit-border-top-left-radius: 5px;
+				-webkit-border-top-right-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				-moz-border-radius-topright: 5px;
 				border-top-left-radius: 5px;
 				border-top-right-radius: 5px;
 				height:170px;
+				background: url(../img/header_forum.png) no-repeat;
+				background-position: 60% 84%; 
+				.at2x('../img/header_forum.png', 907px, 606px);
 
 				h4{
 					background: @Green;
@@ -485,6 +582,9 @@ section{
 				font-weight: 500;
 				line-height: 25px;
 				border-bottom-right-radius: 5px;
+				-webkit-border-bottom-right-radius: 5px;
+				-moz-border-radius-bottomright: 5px;
+
 				background:@Green;
 				position: absolute;
 				top:400px;
@@ -496,20 +596,31 @@ section{
 				color: @DarkGrey;
 			}
 		}
+		.col-md-5{padding:0;}
 		.uitgelicht{
 			background: @LightGrey;
-			width: 360px;
 			height: 425px;
+			width: 42.2%;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
 			border-radius: 5px;
-			margin-right: 10px;
 			margin-bottom: 10px;
 			padding: 0;
 			position: relative;
 
 			.HeadImg{
+				position: relative;
+				top:-10px;
+				-webkit-border-top-left-radius: 5px;
+				-webkit-border-top-right-radius: 5px;
+				-moz-border-radius-topleft: 5px;
+				-moz-border-radius-topright: 5px;
 				border-top-left-radius: 5px;
 				border-top-right-radius: 5px;
 				height:170px;
+				background: url(../img/header_uitgelicht.png) no-repeat;
+				background-position: 50% 60%; 
+				.at2x('../img/header_uitgelicht.png', 907px, 606px);
 
 				h4{
 					background: @Pink;
@@ -541,6 +652,8 @@ section{
 				font-weight: 500;
 				line-height: 25px;
 				border-bottom-right-radius: 5px;
+				-webkit-border-bottom-right-radius: 5px;
+				-moz-border-radius-bottomright: 5px;
 				background:@Pink;
 				position: absolute;
 				top:400px;
@@ -561,23 +674,26 @@ footer{
 		margin: 0;
 		height: 200px;
 		color: @MidGrey;
-		padding:10px;
+		
 
 		.sitemap{
-			
+			border-right:1px solid @MidGrey;
 			ul{
 				margin:0;
 				padding:0;
+				display: inline-block;
+				width:100px;
 			}
 			ul li{
 				list-style: none;
 				font-size: 12px;
 				display: block;
 				width:100px;
+
+				a{color:@MidGrey;}
+				a:hover{color:@Green;}
 			}
-			.col-md-1{
-				border-right:1px solid @MidGrey;
-			}
+			
 		}
 		.verbindt{
 			border-right:1px solid @MidGrey;
@@ -586,6 +702,8 @@ footer{
 
 			p{
 				font-size: 12px;
+				height: 100px;
+				margin-top:50px;
 			}
 		}
 		.partners{}
