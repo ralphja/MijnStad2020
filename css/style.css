@@ -6076,6 +6076,12 @@ header .logo {
     background-size: 218px 197px;
   }
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  header .logo {
+    background-size: 180px 160px;
+    top: 10px;
+  }
+}
 header .TopBar {
   background: #231f20;
   height: 30px;
@@ -6140,6 +6146,11 @@ header .navigation nav li {
   width: 130px;
   border-left: 1px solid #231f20;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  header .navigation nav li {
+    width: 100px;
+  }
+}
 header .navigation nav li a {
   color: #231f20;
   font-weight: 500;
@@ -6148,12 +6159,23 @@ header .navigation nav li a {
   width: 130px;
   display: inline-block;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  header .navigation nav li a {
+    font-size: 12px;
+    width: 100px;
+  }
+}
 header .navigation nav li span {
   font-size: 10px;
   color: #9b9b9b;
   clear: both;
   display: block;
   text-align: center;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  header .navigation nav li span {
+    font-size: 8px;
+  }
 }
 header .navigation nav li .glyphicon {
   display: inline-block;
@@ -6272,6 +6294,11 @@ section .content .evenementen .HeadImg {
     background-size: 355px 235px;
   }
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  section .content .evenementen .HeadImg {
+    background-size: auto 101%;
+  }
+}
 section .content .evenementen .HeadImg h4 {
   background: #ec008c;
   height: 30px;
@@ -6281,6 +6308,11 @@ section .content .evenementen .HeadImg h4 {
   position: relative;
   top: 120px;
   width: 90%;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section .content .evenementen .HeadImg h4 {
+    width: 80%;
+  }
 }
 section .content .evenementen .HeadImg h4:hover {
   background: #c80077;
@@ -6303,6 +6335,11 @@ section .content .evenementen .ContentBlock ul li .datum {
   margin-right: 20px;
   width: 50px;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  section .content .evenementen .ContentBlock ul li .datum {
+    margin-right: 10px;
+  }
+}
 section .content .evenementen .ContentBlock ul li a {
   float: left;
   color: #231f20;
@@ -6314,6 +6351,11 @@ section .content .evenementen .ContentBlock ul li span {
   color: #9b9b9b;
   font-size: 10px;
   margin-left: 70px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section .content .evenementen .ContentBlock ul li span {
+    margin-right: 30px;
+  }
 }
 section .content .evenementen .MeerBtn {
   height: 25px;
