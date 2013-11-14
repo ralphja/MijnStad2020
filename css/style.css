@@ -6040,16 +6040,31 @@ body {
 }
 header {
   height: 450px;
-  /* Small devices (tablets, 768px and up) */
   /* Medium devices (desktops, 992px and up) */
   /* Large devices (large desktops, 1200px and up) */
 }
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   header {
+    height: 150px;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    background: orange;
+  }
+}
+@media (min-width: 321px) and (max-width: 767px) {
+  header {
+    background: #000;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    height: 380px;
     background: blue;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   header {
     background: green;
   }
@@ -6076,7 +6091,25 @@ header .logo {
     background-size: 218px 197px;
   }
 }
+@media (max-width: 767px) {
+  header .logo {
+    background-size: 150px 130px;
+    top: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .logo {
+    background-size: 150px 130px;
+    top: 10px;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
+  header .logo {
+    background-size: 180px 160px;
+    top: 10px;
+  }
+}
+@media (min-width: 1200px) {
   header .logo {
     background-size: 180px 160px;
     top: 10px;
@@ -6109,6 +6142,16 @@ header .TopBar .PlaatsSelc p span {
   color: #ec008c;
   margin-left: 5px;
 }
+@media (max-width: 767px) {
+  header .TopBar .PlaatsSelc {
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 767px) {
+  header .TopBar .PlaatsSelc {
+    display: inline;
+  }
+}
 header .TopBar .login {
   width: 50px;
   height: 20px;
@@ -6120,10 +6163,30 @@ header .TopBar .login {
 header .TopBar .login a {
   color: #231f20;
 }
+@media (max-width: 767px) {
+  header .TopBar .login {
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 767px) {
+  header .TopBar .login {
+    display: inline;
+  }
+}
 header .TopBar .search {
   color: #00aeef;
   font-size: 20px;
   margin-top: 5px;
+}
+@media (max-width: 767px) {
+  header .TopBar .search {
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 767px) {
+  header .TopBar .search {
+    display: inline;
+  }
 }
 header .navigation {
   height: 120px;
@@ -6131,6 +6194,16 @@ header .navigation {
   border-bottom: 1px solid #231f20;
   clear: both;
   margin: 0 -3px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .navigation {
+    height: 100px;
+  }
+}
+@media (max-width: 767px) {
+  header .navigation nav {
+    display: none;
+  }
 }
 header .navigation nav ul {
   margin-bottom: 0px;
@@ -6146,6 +6219,13 @@ header .navigation nav li {
   width: 130px;
   border-left: 1px solid #231f20;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  header .navigation nav li {
+    width: 88px;
+    height: 100px;
+    padding: 34px 0px 0px ;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   header .navigation nav li {
     width: 100px;
@@ -6159,6 +6239,13 @@ header .navigation nav li a {
   width: 130px;
   display: inline-block;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  header .navigation nav li a {
+    font-size: 11px;
+    width: 88px;
+    height: 100px;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   header .navigation nav li a {
     font-size: 12px;
@@ -6171,6 +6258,11 @@ header .navigation nav li span {
   clear: both;
   display: block;
   text-align: center;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .navigation nav li span {
+    font-size: 7px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   header .navigation nav li span {
@@ -6255,11 +6347,55 @@ header .carousel {
 header .carousel .carousel-indicators .active {
   border: 2px solid #00aeef;
 }
+@media (max-width: 767px) {
+  header .carousel {
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 767px) {
+  header .carousel {
+    height: 250px;
+    display: inline;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .carousel {
+    height: 250px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .carousel-inner > .item > img,
+  header .carousel-inner > .item > a > img {
+    height: 250px;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  header .carousel-inner > .item > img,
+  header .carousel-inner > .item > a > img {
+    height: 300px;
+    width: 100%;
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  header .carousel-inner > .item > img,
+  header .carousel-inner > .item > a > img {
+    display: block;
+    height: 300px;
+    width: 100%;
+  }
+}
 section .content {
   background: #fff;
   margin: 0;
   padding: 10px;
-  height: 445px;
+  height: 880px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content {
+    height: 1335px;
+  }
 }
 section .content .evenementen {
   background: #e2e2e2;
@@ -6272,6 +6408,21 @@ section .content .evenementen {
   margin-bottom: 10px;
   padding: 0;
   position: relative;
+}
+@media (max-width: 767px) {
+  section .content .evenementen {
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 767px) {
+  section .content .evenementen {
+    display: inline;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .evenementen {
+    width: 49%;
+  }
 }
 section .content .evenementen .HeadImg {
   position: relative;
@@ -6286,12 +6437,18 @@ section .content .evenementen .HeadImg {
   max-width: 100%;
   min-width: 300px;
   background: url(../img/header_events.png) no-repeat;
+  background-size: auto 130%;
   background-image: url('../img/header_events.png');
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
   section .content .evenementen .HeadImg {
     background-image: url("../img/header_events@2x.png");
     background-size: 355px 235px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .evenementen .HeadImg {
+    background-size: auto 140%;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -6308,6 +6465,11 @@ section .content .evenementen .HeadImg h4 {
   position: relative;
   top: 120px;
   width: 90%;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .evenementen .HeadImg h4 {
+    width: 90%;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   section .content .evenementen .HeadImg h4 {
@@ -6335,6 +6497,11 @@ section .content .evenementen .ContentBlock ul li .datum {
   margin-right: 20px;
   width: 50px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .evenementen .ContentBlock ul li .datum {
+    margin-right: 20px;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   section .content .evenementen .ContentBlock ul li .datum {
     margin-right: 10px;
@@ -6352,9 +6519,14 @@ section .content .evenementen .ContentBlock ul li span {
   font-size: 10px;
   margin-left: 70px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .evenementen .ContentBlock ul li span {
+    margin-left: 70px;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   section .content .evenementen .ContentBlock ul li span {
-    margin-right: 30px;
+    margin-left: 60px;
   }
 }
 section .content .evenementen .MeerBtn {
@@ -6388,6 +6560,27 @@ section .content .watismijnstad {
   padding: 0;
   position: relative;
 }
+@media (max-width: 767px) {
+  section .content .watismijnstad {
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 767px) {
+  section .content .watismijnstad {
+    display: inline;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .watismijnstad {
+    width: 49%;
+    margin-right: 0;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section .content .watismijnstad {
+    width: 45%;
+  }
+}
 section .content .watismijnstad .HeadImg {
   position: relative;
   top: -10px;
@@ -6398,6 +6591,7 @@ section .content .watismijnstad .HeadImg {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   height: 170px;
+  background-size: 100% 100%;
   background: url(../img/header_mijnstad.png) no-repeat;
   background-position: 30% 55%;
   background-image: url('../img/header_mijnstad.png');
@@ -6429,6 +6623,11 @@ section .content .watismijnstad .ContentBlock p {
   font-weight: 100;
   font-size: 12px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .watismijnstad .ContentBlock p {
+    font-size: 10px;
+  }
+}
 section .content .watismijnstad .MeerBtn {
   height: 25px;
   width: 100px;
@@ -6456,6 +6655,27 @@ section .content .sidebar {
   width: 20%;
   padding-left: 0;
   margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  section .content .sidebar {
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 767px) {
+  section .content .sidebar {
+    display: inline;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .sidebar {
+    width: 49%;
+    margin-right: 10px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section .content .sidebar {
+    width: 24%;
+  }
 }
 section .content .sidebar #WordLid {
   padding: 10px;
@@ -6496,6 +6716,13 @@ section .content .sidebar #WordLid a #WordLidBtn {
   line-height: 30px;
   margin-bottom: 10px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .sidebar #WordLid a #WordLidBtn {
+    height: 50px;
+    font-size: 22px;
+    line-height: 50px;
+  }
+}
 section .content .sidebar #WordLid a #WordLidBtn:hover {
   background: #c80077;
 }
@@ -6512,6 +6739,13 @@ section .content .sidebar #WordLid a #LoginBtn {
   line-height: 30px;
   margin-bottom: 10px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .sidebar #WordLid a #LoginBtn {
+    height: 50px;
+    font-size: 22px;
+    line-height: 50px;
+  }
+}
 section .content .sidebar #WordLid a #LoginBtn:hover {
   background: #231f20;
   color: #fff;
@@ -6526,6 +6760,13 @@ section .content .sidebar .arrow-down {
   margin-right: auto;
   position: relative;
   z-index: 1000;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .sidebar .arrow-down {
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 30px solid #8cc63f;
+  }
 }
 section .content .sidebar #PlaatsEvent {
   width: 100%;
@@ -6550,6 +6791,13 @@ section .content .sidebar #PlaatsEvent .arrow-down {
   z-index: 1;
   position: relative;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .sidebar #PlaatsEvent .arrow-down {
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 30px solid #fff;
+  }
+}
 section .content .sidebar #PlaatsEvent a {
   text-decoration: none;
 }
@@ -6560,6 +6808,11 @@ section .content .sidebar #PlaatsEvent a #PlaatsEventBtn {
   text-align: center;
   background: #8cc63f;
   margin: 15px 10px 10px 10px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .sidebar #PlaatsEvent a #PlaatsEventBtn {
+    padding: 5px;
+  }
 }
 section .content .sidebar #PlaatsEvent a #PlaatsEventBtn h3 {
   color: #fff;
@@ -6591,6 +6844,22 @@ section .content .nieuws {
   padding: 0;
   position: relative;
 }
+@media (max-width: 767px) {
+  section .content .nieuws {
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 767px) {
+  section .content .nieuws {
+    display: inline;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .nieuws {
+    width: 49%;
+    margin-right: 0;
+  }
+}
 section .content .nieuws .HeadImg {
   position: relative;
   top: -10px;
@@ -6601,6 +6870,7 @@ section .content .nieuws .HeadImg {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   height: 170px;
+  background-size: auto 120%;
   background: url(../img/header_nieuws.png) no-repeat;
   background-position: 60% 60%;
   background-image: url('../img/header_nieuws.png');
@@ -6642,6 +6912,11 @@ section .content .nieuws .ContentBlock ul li .datum {
   margin-right: 20px;
   width: 50px;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  section .content .nieuws .ContentBlock ul li .datum {
+    margin-right: 10px;
+  }
+}
 section .content .nieuws .ContentBlock ul li a {
   float: left;
   color: #231f20;
@@ -6653,6 +6928,11 @@ section .content .nieuws .ContentBlock ul li span {
   color: #9b9b9b;
   font-size: 10px;
   margin-left: 70px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section .content .nieuws .ContentBlock ul li span {
+    margin-left: 60px;
+  }
 }
 section .content .nieuws .MeerBtn {
   height: 25px;
@@ -6684,6 +6964,21 @@ section .content .forum {
   margin-bottom: 10px;
   padding: 0;
   position: relative;
+}
+@media (max-width: 767px) {
+  section .content .forum {
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 767px) {
+  section .content .forum {
+    display: inline;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .forum {
+    width: 49%;
+  }
 }
 section .content .forum .HeadImg {
   position: relative;
@@ -6734,7 +7029,7 @@ section .content .forum .ContentBlock ul li .datum {
   color: #9b9b9b;
   float: left;
   margin-right: 20px;
-  width: 100px;
+  width: 110px;
 }
 section .content .forum .ContentBlock ul li a {
   float: left;
@@ -6746,7 +7041,7 @@ section .content .forum .ContentBlock ul li a:hover {
 section .content .forum .ContentBlock ul li span {
   color: #9b9b9b;
   font-size: 10px;
-  margin-left: 120px;
+  margin-left: 130px;
 }
 section .content .forum .MeerBtn {
   height: 25px;
@@ -6780,6 +7075,27 @@ section .content .uitgelicht {
   margin-bottom: 10px;
   padding: 0;
   position: relative;
+}
+@media (max-width: 767px) {
+  section .content .uitgelicht {
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width: 767px) {
+  section .content .uitgelicht {
+    display: inline;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .content .uitgelicht {
+    width: 49%;
+    margin-right: 0;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section .content .uitgelicht {
+    width: 41%;
+  }
 }
 section .content .uitgelicht .HeadImg {
   position: relative;
@@ -6848,6 +7164,11 @@ footer .footer {
   height: 200px;
   color: #9b9b9b;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  footer .footer {
+    height: 380px;
+  }
+}
 footer .footer .sitemap {
   border-right: 1px solid #9b9b9b;
 }
@@ -6868,6 +7189,11 @@ footer .footer .sitemap ul li a {
 }
 footer .footer .sitemap ul li a:hover {
   color: #8cc63f;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer .footer .sitemap {
+    margin-bottom: 20px;
+  }
 }
 footer .footer .verbindt {
   border-right: 1px solid #9b9b9b;
@@ -6912,6 +7238,12 @@ footer .footer .verbindt span {
   text-align: center;
   line-height: 25px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  footer .footer .verbindt {
+    border-right: none;
+    margin-bottom: 30px;
+  }
+}
 footer .footer .copyright p {
   font-size: 12px;
   height: 100px;
@@ -6924,4 +7256,15 @@ footer .footer .partners div {
   background: #fff;
   height: 150px;
   width: 200px;
+}
+@media (max-width: 767px) {
+  footer .footer .partners div {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  footer .footer .partners div {
+    height: 125px;
+    width: 175px;
+  }
 }
