@@ -6295,52 +6295,76 @@ header .navigation .logo {
     left: -20px;
   }
 }
+header .navigation .mobilenav {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+}
+header .navigation .mobilenav a.mobilebtn {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  font-size: 36px;
+  color: #231f20;
+}
+header .navigation .mobilenav .mobilemenu {
+  display: none;
+  background: #8cc63f;
+  position: absolute;
+  padding: 10px;
+  width: 280px;
+  right: -10px;
+  z-index: 130;
+  border: 1px solid #231f20;
+}
+header .navigation .mobilenav .mobilemenu a {
+  color: #231f20;
+  width: 250px;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 500;
+}
+header .navigation .mobilenav .mobilemenu a span {
+  color: #fff;
+  margin-left: 80px;
+}
+header .navigation .mobilenav .mobilemenu li {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #231f20;
+  padding: 8px 0;
+  width: 260px;
+  display: inline-block;
+}
+header .navigation .mobilenav .mobilemenu li li:last-child {
+  border-bottom: none;
+}
+header .navigation .mobilenav .mobilemenu li ul {
+  display: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+header .navigation .mobilenav .mobilemenu li ul li:last-child {
+  border-bottom: none;
+}
 @media (min-width: 768px) and (max-width: 991px) {
-  header .navigation .mobile {
+  header .navigation .mobilenav {
     display: none;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  header .navigation .mobile {
+  header .navigation .mobilenav {
     display: none;
   }
 }
 @media (min-width: 1200px) {
-  header .navigation .mobile {
+  header .navigation .mobilenav {
     display: none;
-  }
-}
-header .navigation .mobile .dl-menu.dl-animate-out-1 {
-  animation: MenuAnimOut1 0.4s linear forwards;
-}
-@keyframes MenuAnimOut1 {
-  50% {
-    transform: translateZ(-250px) rotateY(30deg);
-  }
-  75% {
-    transform: translateZ(-372.5px) rotateY(15deg);
-    opacity: .5;
-  }
-  100% {
-    transform: translateZ(-500px) rotateY(0deg);
-    opacity: 0;
-  }
-}
-header .navigation .mobile .dl-menu.dl-animate-in-1 {
-  animation: MenuAnimIn1 0.3s linear forwards;
-}
-@keyframes MenuAnimIn1 {
-  0% {
-    transform: translateZ(-500px) rotateY(0deg);
-    opacity: 0;
-  }
-  20% {
-    transform: translateZ(-250px) rotateY(30deg);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateZ(0px) rotateY(0deg);
-    opacity: 1;
   }
 }
 @media (max-width: 767px) {
@@ -6947,7 +6971,7 @@ section .homecontent .evenementen .HeadImg {
 }
 @media (max-width: 767px) {
   section .homecontent .evenementen .HeadImg {
-    background-size: 100%;
+    background-size: auto 100%;
     background-position: 0 -40px;
   }
 }
@@ -7881,6 +7905,43 @@ footer .footer .verbindt ul li .linkedin {
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
   footer .footer .verbindt ul li .linkedin {
     background-image: url("../img/linkedin@2x.png");
+    background-size: 28px 28px;
+  }
+}
+footer .footer .verbindt ul li a.facebook:hover {
+  width: 28px;
+  height: 28px;
+  background-size: 14px 14px;
+  background: url(../img/facebook_hover.png) no-repeat;
+  background-image: url('../img/facebook_hover.png');
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  footer .footer .verbindt ul li a.facebook:hover {
+    background-image: url("../img/facebook_hover@2x.png");
+    background-size: 28px 28px;
+  }
+}
+footer .footer .verbindt ul li a.twitter:hover {
+  height: 28px;
+  width: 28px;
+  background: url(../img/twitter_hover.png) no-repeat;
+  background-image: url('../img/twitter_hover.png');
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  footer .footer .verbindt ul li a.twitter:hover {
+    background-image: url("../img/twitter_hover@2x.png");
+    background-size: 28px 28px;
+  }
+}
+footer .footer .verbindt ul li a.linkedin:hover {
+  height: 28px;
+  width: 28px;
+  background: url(../img/linkedin_hover.png) no-repeat;
+  background-image: url('../img/linkedin_hover.png');
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  footer .footer .verbindt ul li a.linkedin:hover {
+    background-image: url("../img/linkedin_hover@2x.png");
     background-size: 28px 28px;
   }
 }
